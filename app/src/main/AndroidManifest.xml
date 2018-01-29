@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.twinkleanand.whatsapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name="com.example.twinkleanand.whatsapp.letsChat">
+        <activity android:name="com.example.twinkleanand.whatsapp.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.twinkleanand.whatsapp.StartActivity" />
+        <activity
+            android:name="com.example.twinkleanand.whatsapp.RegisterActivity"
+            android:parentActivityName="com.example.twinkleanand.whatsapp.MainActivity" />
+        <activity
+            android:name="com.example.twinkleanand.whatsapp.LoginAcivity"
+            android:parentActivityName="com.example.twinkleanand.whatsapp.MainActivity" />
+
+        <activity android:name="com.example.twinkleanand.whatsapp.AccountSettings" />
+
+        <activity android:name="com.example.twinkleanand.whatsapp.StatusActivity"
+                  android:parentActivityName="com.example.twinkleanand.whatsapp.MainActivity"/>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name="com.example.twinkleanand.whatsapp.UsersActivity"
+            android:parentActivityName="com.example.twinkleanand.whatsapp.MainActivity" />
+
+        <activity android:name="com.example.twinkleanand.whatsapp.ChatActivity"
+            android:parentActivityName="com.example.twinkleanand.whatsapp.MainActivity"/>
+
+        <activity android:name="com.example.twinkleanand.whatsapp.ProfileActivity">
+            <intent-filter>
+                <action android:name="com.example.twinkleanand.whatsapp_TARGET_NOTIFICATION" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+
+
+        <service
+            android:name="com.example.twinkleanand.whatsapp.MyFireBaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

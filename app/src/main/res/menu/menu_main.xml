@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_main">
+
+    <item
+        android:id="@+id/main_accountsetting"
+        android:title="Account Settings" />
+    <item
+        android:id="@+id/main_logout"
+        android:title="LogOut" />
+    <item
+        android:id="@+id/main_users"
+        android:title="Users"/>
+
+</menu>

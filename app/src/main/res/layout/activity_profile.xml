@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.twinkleanand.whatsapp.ProfileActivity"
+    android:background="#323232">
+
+    <ImageView
+        android:id="@+id/profile_ImageView"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/people" />
+
+    <TextView
+        android:id="@+id/profile_displayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_ImageView"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/profile_Status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/profile_RequestFriendsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:background="@color/colorAccent"
+        android:padding="20dp"
+        android:text="Send Friend Request"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/profile_Friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/profile_RequestFriendsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="78dp"
+        android:text="Friends Count"
+        android:textColor="@android:color/white" />
+
+    <ProgressBar
+        android:id="@+id/profile_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_Status"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:id="@+id/profile_declineReq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_RequestFriendsButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
+        android:padding="20dp"
+        android:visibility="invisible"
+        android:text="DECLINE FRIEND REQUEST"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
